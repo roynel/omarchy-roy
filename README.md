@@ -4,7 +4,17 @@ This repository contains custom configuration files for my Omarchy setup.
 
 ## Setup
 
-After installing Omarchy, run the setup scripts to apply your custom configurations:
+### Installation
+
+```bash
+./install.sh
+```
+
+This script installs Omarchy-Roy to `~/.local/share/omarchy-roy`. Run this first if you're setting up for the first time.
+
+### Configuration Scripts
+
+After installation, run these scripts to apply your custom configurations:
 
 ### Fix Monitor Resolution and Workspaces
 
