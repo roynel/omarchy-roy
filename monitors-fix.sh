@@ -6,6 +6,6 @@ set -e  # exit on any error
 echo "Fixing monitor resolution..."
 
 # hypr
-ln -sf ~/.local/share/omarchy-roy/hypr/monitors.conf ~/.config/hypr/monitors.conf
+ln -sf ~/.local/share/omarchy-roy/src/hypr/monitors.conf ~/.config/hypr/monitors.conf
 
 echo "✓ Monitor resolution and workspaces fixed successfully."

@@ -4,7 +4,7 @@
 set -e  # exit on any error
 
 HYPRLAND_CONF="$HOME/.config/hypr/hyprland.conf"
-BINDING_SOURCE="source = ~/.local/share/omarchy-roy/hypr/bindings.conf"
+BINDING_SOURCE="source = ~/.local/share/omarchy-roy/src/hypr/bindings.conf"
 
 # Check if the binding already exists
 if grep -q "$BINDING_SOURCE" "$HYPRLAND_CONF"; then
@@ -17,7 +17,7 @@ else
     {
         echo ""
         echo "# Omarchy-Roy config"
-        echo "source = ~/.local/share/omarchy-roy/hypr/bindings.conf"
+        echo "source = ~/.local/share/omarchy-roy/src/hypr/bindings.conf"
     } >> "$HYPRLAND_CONF"
     
     echo "✓ Custom bindings added successfully."
