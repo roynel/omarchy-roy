@@ -2,15 +2,33 @@
 
 This repository contains custom configuration files for my Omarchy setup.
 
-## Usage
+## Setup
 
-After installing Omarchy, run the setup script to replace the default Omarchy configuration files with the custom setup defined in this repository:
+After installing Omarchy, run the setup scripts to apply your custom configurations:
+
+### Fix Monitor Resolution and Workspaces
 
 ```bash
-./setup-links.sh
+./monitors-fix.sh
 ```
 
-This script creates symbolic links to the configuration files in this repository, replacing the default Omarchy installation files with your personalized setup.
+This script links your custom `monitors.conf` to fix monitor resolution and workspace settings.
+
+### Add Custom Key Bindings
+
+```bash
+./add-bindings.sh
+```
+
+This script adds your custom key bindings from `hypr/bindings.conf` to the hyprland configuration. It checks if the bindings are already added to avoid duplicates.
+
+### Fix Chrome-based Browsers
+
+```bash
+./chromebased-browser-fix.sh
+```
+
+This script backs up the original browser configuration files and applies custom fixes to prevent chrome-based browsers from crashing when switching workspaces.
 
 ## Directory Structure
 
