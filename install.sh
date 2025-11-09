@@ -16,8 +16,16 @@ else
     # Get the directory where this script is located
     SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
     
-    # Move all files and folders to the omarchy-roy directory
+    # Move all files and folders (including hidden files) to the omarchy-roy directory
+    shopt -s dotglob  # Enable matching hidden files
     mv "$SCRIPT_DIR"/* "$INSTALL_DIR/" 2>/dev/null || true
+    shopt -u dotglob  # Disable matching hidden files
+    
+    # Remove the old source directory
+    if [ "$SCRIPT_DIR" != "$INSTALL_DIR" ] && [ -d "$SCRIPT_DIR" ]; then
+        rm -rf "$SCRIPT_DIR"
+        echo "✓ Removed old installation directory: $SCRIPT_DIR"
+    fi
     
     echo "✓ Omarchy-Roy installed successfully."
     echo "Location: $INSTALL_DIR"
