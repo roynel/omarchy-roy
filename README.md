@@ -10,7 +10,7 @@ This repository contains custom configuration files for my Omarchy setup.
 ./install.sh
 ```
 
-This script installs Omarchy-Roy to `~/.local/share/omarchy-roy`. Run this first if you're setting up for the first time.
+This script installs Omarchy-Roy to `~/.local/share/omarchy-roy`. It moves all files (including hidden files like `.git`) and cleans up the original directory. Run this first if you're setting up for the first time.
 
 ### Configuration Scripts
 
@@ -42,6 +42,17 @@ This script backs up the original browser configuration files and applies custom
 - **Setup**: `omarchy-launch-browser` script
 - **Chromium**: Only applied if `chromium.desktop` exists
 - **Brave**: Only applied if `brave-browser.desktop` exists
+
+### Remove and Install Applications
+
+```bash
+./remove+install-apps.sh
+```
+
+This script manages package installation and removal:
+- **Removes**: `1password-beta`, `1password-cli` (only if installed)
+- **Installs via pacman**: `keepassxc`, `warp-terminal` (only if not already installed)
+- **Installs via yay**: `brave-bin` (only if not already installed)
 
 ## Directory Structure
 
