@@ -54,6 +54,14 @@ This script manages package installation and removal:
 - **Installs via pacman**: `keepassxc`, `warp-terminal` (only if not already installed)
 - **Installs via yay**: `brave-bin` (only if not already installed)
 
+### Add Custom Bashrc
+
+```bash
+./add-bashrc.sh
+```
+
+This script adds a source line to your `~/.bashrc` to load custom bash configurations from `src/bashrc`. It checks if the line already exists to avoid duplicates.
+
 ## Directory Structure
 
 - `src/` - Source configuration files
