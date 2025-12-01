@@ -62,6 +62,19 @@ This script manages package installation and removal:
 
 This script adds a source line to your `~/.bashrc` to load custom bash configurations from `src/bashrc`. It checks if the line already exists to avoid duplicates.
 
+### Setup PIA VPN
+
+```bash
+sudo bash ./setup-pia-vpn.sh
+```
+
+This script automates the installation and configuration of Private Internet Access VPN:
+- **Installs**: `private-internet-access-vpn` and `openvpn` packages (if not already installed)
+- **Configuration**: Prompts for PIA credentials and securely stores them in `/etc/private-internet-access/login.conf`
+- **Auto-setup**: Automatically configures all VPN server connections
+- **CRL Fix**: Disables CRL verification to prevent connection issues
+- **Instructions**: Provides commands to connect to VPN servers using either `openvpn` directly or `systemd` service
+
 ## Directory Structure
 
 - `src/` - Source configuration files

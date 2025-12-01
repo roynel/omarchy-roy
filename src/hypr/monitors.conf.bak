@@ -1,0 +1,50 @@
+# See https://wiki.hyprland.org/Configuring/Monitors/
+# List current monitors and resolutions possible: hyprctl monitors
+# Format: monitor = [port], resolution, position, scale
+# You must relaunch Hyprland after changing any envs (use Super+Esc, then Relaunch)
+
+
+# Hyprland Monitors Configuration
+# See https://wiki.hyprland.org/Configuring/Monitors/
+# Format: monitor = [name], resolution, position, scale
+
+# --- Global environment settings ---
+env = GDK_SCALE,1
+
+# --- Monitor layout ---
+# Left monitor (Acer - HDMI)
+monitor = HDMI-A-2, 1920x1080@60, 0x0, 1
+
+# Right monitor (AOC - VGA)
+monitor = VGA-1, 1920x1080@60, 1920x0, 1
+
+# --- Workspace assignments ---
+# Workspace 1 on the left (Acer)
+workspace = 1, monitor:HDMI-A-2, persistent:true
+
+# Workspace 2 on the right (AOC)
+workspace = 2, monitor:VGA-1, persistent:true
+
+# --- Examples ---
+
+# Optimized for retina-class 2x displays, like 13" 2.8K, 27" 5K, 32" 6K.
+#env = GDK_SCALE,2
+# monitor=,preferred,auto,auto
+#monitor = desc:Acer Technologies G236HL LVNAA0022462, 1920x1080, 0x0, 1
+# monitor = desc:AOC 2252W HLDE61A008808, 1920x1080, 1920x0, 1
+
+# Quotes required; exclude the serials
+# workspace = 1, monitor:desc:"Acer Technologies G236HL", persistent:true
+# workspace = 2, monitor:desc:"AOC 2252W", persistent:true
+
+# Good compromise for 27" or 32" 4K monitors (but fractional!)
+# env = GDK_SCALE,1.75
+# monitor=,preferred,auto,1.666667
+
+# Straight 1x setup for low-resolution displays like 1080p or 1440p
+# env = GDK_SCALE,1
+# monitor=,preferred,auto,1
+
+# Example for Framework 13 w/ 6K XDR Apple display
+# monitor = DP-5, 6016x3384@60, auto, 2
+# monitor = eDP-1, 2880x1920@120, auto, 2
