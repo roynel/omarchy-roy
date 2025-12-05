@@ -83,8 +83,10 @@ This script automates the installation and configuration of Private Internet Acc
 
 This script installs and configures the split-monitor-workspaces Hyprland plugin:
 - **Plugin**: Installs `split-monitor-workspaces` from GitHub using `hyprpm` (if not already installed)
-- **Patching**: Backs up and patches `tiling-v2.conf` to add `split-` prefix to workspace keybindings
+- **Keybinding patching**: Backs up and patches `tiling-v2.conf` to add `split-` prefix to workspace keybindings
 - **Commands patched**: `workspace`, `movetoworkspace`, and `movetoworkspacesilent`
+- **Waybar patching**: Automatically configures waybar to display workspaces 1-10 on each monitor correctly
+- **Auto-restart**: Restarts waybar after patching to apply changes immediately
 - **Purpose**: Enables per-monitor workspace management instead of global workspaces
 
 ## Directory Structure
