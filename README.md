@@ -19,7 +19,7 @@ After installation, run these scripts to apply your custom configurations:
 ### Fix Monitor Resolution and Workspaces
 
 ```bash
-./monitors-fix.sh
+./monitors_fix.sh
 ```
 
 This script links your custom `monitors.conf` to fix monitor resolution and workspace settings.
@@ -27,7 +27,7 @@ This script links your custom `monitors.conf` to fix monitor resolution and work
 ### Add Custom Key Bindings
 
 ```bash
-./add-bindings.sh
+./add_bindings.sh
 ```
 
 This script adds your custom key bindings from `hypr/bindings.conf` to the hyprland configuration. It checks if the bindings are already added to avoid duplicates.
@@ -35,7 +35,7 @@ This script adds your custom key bindings from `hypr/bindings.conf` to the hyprl
 ### Fix Chrome-based Browsers
 
 ```bash
-./chromebased-browser-fix.sh
+./chromebased_browser_fix.sh
 ```
 
 This script backs up the original browser configuration files and applies custom fixes to prevent chrome-based browsers from crashing when switching workspaces. The script checks if each browser exists before applying fixes:
@@ -46,7 +46,7 @@ This script backs up the original browser configuration files and applies custom
 ### Remove and Install Applications
 
 ```bash
-./remove+install-apps.sh
+./remove_install_apps.sh
 ```
 
 This script manages package installation and removal:
@@ -57,7 +57,7 @@ This script manages package installation and removal:
 ### Add Custom Bashrc
 
 ```bash
-./add-bashrc.sh
+./add_bashrc.sh
 ```
 
 This script adds a source line to your `~/.bashrc` to load custom bash configurations from `src/bashrc`. It checks if the line already exists to avoid duplicates.
@@ -65,7 +65,7 @@ This script adds a source line to your `~/.bashrc` to load custom bash configura
 ### Setup PIA VPN
 
 ```bash
-sudo bash ./setup-pia-vpn.sh
+sudo bash ./setup_pia_vpn.sh
 ```
 
 This script automates the installation and configuration of Private Internet Access VPN:
@@ -74,6 +74,18 @@ This script automates the installation and configuration of Private Internet Acc
 - **Auto-setup**: Automatically configures all VPN server connections
 - **CRL Fix**: Disables CRL verification to prevent connection issues
 - **Instructions**: Provides commands to connect to VPN servers using either `openvpn` directly or `systemd` service
+
+### Patch Split Monitor Workspaces
+
+```bash
+./patch_split_monitor.sh
+```
+
+This script installs and configures the split-monitor-workspaces Hyprland plugin:
+- **Plugin**: Installs `split-monitor-workspaces` from GitHub using `hyprpm` (if not already installed)
+- **Patching**: Backs up and patches `tiling-v2.conf` to add `split-` prefix to workspace keybindings
+- **Commands patched**: `workspace`, `movetoworkspace`, and `movetoworkspacesilent`
+- **Purpose**: Enables per-monitor workspace management instead of global workspaces
 
 ## Directory Structure
 
