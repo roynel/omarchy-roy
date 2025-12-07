@@ -53,5 +53,18 @@ else
     echo "✓ Installed brave-bin"
 fi
 
+# Install Mega CMD if not already installed
+if pacman -Qi megacmd &>/dev/null; then
+    echo "✓ megacmd is already installed"
+else
+    echo "Installing Mega CMD..."
+    cd /tmp
+    wget https://mega.nz/linux/repo/Arch_Extra/x86_64/megacmd-x86_64.pkg.tar.zst
+    sudo pacman -U --noconfirm megacmd-x86_64.pkg.tar.zst
+    rm -f megacmd-x86_64.pkg.tar.zst
+    cd - > /dev/null
+    echo "✓ Installed megacmd"
+fi
+
 echo ""
 echo "✓ All operations completed successfully!"
