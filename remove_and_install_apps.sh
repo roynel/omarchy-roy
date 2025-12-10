@@ -66,5 +66,15 @@ else
     echo "✓ Installed megacmd"
 fi
 
+# Install Zed Editor if not already installed
+if pacman -Qi zed &>/dev/null; then
+    echo "✓ zed is already installed"
+else
+    echo "Installing Zed Editor and dependencies..."
+    sudo pacman -S --noconfirm zed vulkan-intel
+    sudo ln -sf /usr/lib/zed/zed-editor /usr/bin/zed
+    echo "✓ Installed zed"
+fi
+
 echo ""
 echo "✓ All operations completed successfully!"
