@@ -1,3 +1,6 @@
+# Defaults
+alias qr='zbarimg'
+
 # Remotes
 alias server='xfreerdp3 /v:23.112.119.118 /u:emby /p:Will0w\$rul3s'
 
