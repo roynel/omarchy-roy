@@ -1,9 +1,10 @@
 # Defaults
 alias qr='zbarimg'
+alias shred='shred -vzu -n 5'
 
 # Remotes
 alias server='xfreerdp3 /v:23.112.119.118 /u:emby /p:Will0w\$rul3s'
 
 # VPNs
-alias vpn-norway='sudo openvpn --config /etc/openvpn/client/Norway.conf'
-alias vpn-czech='sudo openvpn --config /etc/openvpn/client/Czech_Republic.conf'
+alias vpn-norway='sudo openvpn --config /etc/openvpn/client/Norway.conf --daemon && sleep 3 && librewolf'
+alias vpn-czech='sudo openvpn --config /etc/openvpn/client/Czech_Republic.conf --daemon && sleep 3 && librewolf'
