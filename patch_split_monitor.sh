@@ -132,12 +132,6 @@ if 'hyprland/workspaces' in config:
     format_icons["default"] = ""
     format_icons["active"] = "󱓻"
     
-    # Set persistent workspaces per monitor
-    workspaces_config['persistent-workspaces'] = {
-        monitor1: list(range(1, 11)),
-        monitor2: list(range(11, 21))
-    }
-    
     config['hyprland/workspaces'] = workspaces_config
 
 # Write back to file
